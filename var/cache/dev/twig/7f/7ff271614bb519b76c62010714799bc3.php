@@ -51,23 +51,22 @@ class __TwigTemplate_dde83c5cc0cdd2120c0aca0f1ecd6b89 extends Template
         yield from $this->unwrap()->yieldBlock('title', $context, $blocks);
         // line 8
         yield "\t\t</title>
+
 \t\t<link rel=\"icon\" href=\"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>\">
 
 \t\t<link rel=\"stylesheet\" href=\"./css/styles.css\">
-\t
-
-
-\t\t
-        ";
-        // line 16
+\t\t<link rel=\"stylesheet\" href=\"/css/editStyles.css\"> 
+\t\t<link rel=\"stylesheet\" href=\"/css/newStyles.css\">
+\t\t";
+        // line 15
         yield from $this->unwrap()->yieldBlock('javascripts', $context, $blocks);
-        // line 18
+        // line 16
         yield "\t\t</head>
 \t\t<body>
 \t\t\t";
-        // line 20
+        // line 18
         yield from $this->unwrap()->yieldBlock('body', $context, $blocks);
-        // line 21
+        // line 19
         yield "\t\t</body>
 \t</html>
 ";
@@ -92,22 +91,20 @@ class __TwigTemplate_dde83c5cc0cdd2120c0aca0f1ecd6b89 extends Template
         return; yield '';
     }
 
-    // line 16
+    // line 15
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 17
-        yield "        ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
         return; yield '';
     }
 
-    // line 20
+    // line 18
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -133,7 +130,7 @@ class __TwigTemplate_dde83c5cc0cdd2120c0aca0f1ecd6b89 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  111 => 20,  103 => 17,  96 => 16,  81 => 6,  71 => 21,  69 => 20,  65 => 18,  63 => 16,  53 => 8,  51 => 6,  44 => 1,);
+        return array (  108 => 18,  95 => 15,  80 => 6,  70 => 19,  68 => 18,  64 => 16,  62 => 15,  53 => 8,  51 => 6,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -146,15 +143,13 @@ class __TwigTemplate_dde83c5cc0cdd2120c0aca0f1ecd6b89 extends Template
 \t\t\t{% block title %}Welcome!
 \t\t\t{% endblock %}
 \t\t</title>
+
 \t\t<link rel=\"icon\" href=\"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>\">
 
 \t\t<link rel=\"stylesheet\" href=\"./css/styles.css\">
-\t
-
-
-\t\t
-        {% block javascripts %}
-        {% endblock %}
+\t\t<link rel=\"stylesheet\" href=\"/css/editStyles.css\"> 
+\t\t<link rel=\"stylesheet\" href=\"/css/newStyles.css\">
+\t\t{% block javascripts %}{% endblock %}
 \t\t</head>
 \t\t<body>
 \t\t\t{% block body %}{% endblock %}
