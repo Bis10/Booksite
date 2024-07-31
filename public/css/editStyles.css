@@ -1,0 +1,64 @@
+/* public/css/edit_book.css */
+
+/* Apply general styling for the edit book page */
+body {
+    font-size: 20px; /* Base font size for this page */
+    line-height: 1.6; /* Line spacing for better readability */
+}
+
+/* Style the heading */
+h1 {
+    color: #333; /* Dark color for the heading */
+    margin-bottom: 20px; /* Space below the heading */
+    font-size: 20px; /* Font size for the heading */
+}
+
+/* Style the form container */
+.form-container {
+    background-color: #f9f9f9; /* Light background for the form */
+    padding: 20px; /* Padding inside the form container */
+    border-radius: 8px; /* Rounded corners for the form container */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow around the form */
+    max-width: 600px; /* Limit the width of the form container */
+    margin: 0 auto; /* Center the form container */
+}
+
+/* Style the form elements */
+.form-container input,
+.form-container select,
+.form-container textarea {
+    width: 100%; /* Full width for form elements */
+    padding: 10px; /* Padding inside form elements */
+    margin-bottom: 15px; /* Space below form elements */
+    border: 1px solid #ddd; /* Border around form elements */
+    border-radius: 4px; /* Rounded corners for form elements */
+    font-size: 20px; /* Font size for form elements */
+}
+
+/* Style the submit button */
+.form-container button {
+    background-color: #007bff; /* Blue background color */
+    color: #fff; /* White text color */
+    border: none; /* Remove default border */
+    padding: 10px 20px; /* Padding inside the button */
+    border-radius: 4px; /* Rounded corners for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 20px; /* Font size for the button text */
+}
+
+.form-container button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Style the back to list link */
+.back-link {
+    display: inline-block; /* Align with other elements */
+    margin-top: 20px; /* Space above the link */
+    text-decoration: none; /* Remove underline */
+    color: #007bff; /* Blue color */
+    font-size: 20px; /* Font size for the link text */
+}
+
+.back-link:hover {
+    text-decoration: underline; /* Underline on hover */
+}
