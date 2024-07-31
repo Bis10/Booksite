@@ -88,6 +88,11 @@ class __TwigTemplate_1306807b916d51856431609ed2e56889 extends Template
         yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 12, $this->source); })()), 'form_end');
         yield "
 
+<a href=\"";
+        // line 14
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("book_index");
+        yield "\" class=\"back-link\">Back to list</a>
+
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -116,7 +121,7 @@ class __TwigTemplate_1306807b916d51856431609ed2e56889 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  88 => 12,  83 => 10,  79 => 9,  75 => 7,  68 => 6,  54 => 3,  37 => 1,);
+        return array (  93 => 14,  88 => 12,  83 => 10,  79 => 9,  75 => 7,  68 => 6,  54 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -134,7 +139,8 @@ class __TwigTemplate_1306807b916d51856431609ed2e56889 extends Template
 <button class=\"btn\">Save</button>
 {{ form_end(form) }}
 
-{# <a href=\"{{ path('book_index') }}\">Back to list</a> #}
+<a href=\"{{ path('book_index') }}\" class=\"back-link\">Back to list</a>
+
 {% endblock %}
 ", "booklist/new.html.twig", "/var/www/web/templates/booklist/new.html.twig");
     }

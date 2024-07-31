@@ -76,7 +76,7 @@ button:hover {
     display: block;
     margin-top: 20px;
     text-decoration: none;
-    color: green;
+    color: #007bff;
     font-size: 20px; /* Font size for the create new link */
     line-height: 1.6; /* Line spacing for the create new link */
 }

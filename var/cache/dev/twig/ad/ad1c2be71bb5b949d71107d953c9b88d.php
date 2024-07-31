@@ -160,10 +160,13 @@ class __TwigTemplate_3792b563c6a3178a5526312fe4ec6b86 extends Template
         yield "\t\t</tbody>
 \t</table>
 
-\t<p><a href=\"";
-        // line 47
+<p>
+\t<a href=\"";
+        // line 48
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("book_new");
-        yield "\">Create new</a></p>
+        yield "\" id=\"create-new-link\">Create new</a>
+</p>
+
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -192,7 +195,7 @@ class __TwigTemplate_3792b563c6a3178a5526312fe4ec6b86 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  165 => 47,  160 => 44,  146 => 36,  142 => 35,  137 => 33,  132 => 31,  128 => 30,  124 => 29,  120 => 28,  116 => 27,  113 => 26,  109 => 25,  94 => 12,  87 => 11,  78 => 8,  71 => 7,  62 => 4,  55 => 3,  38 => 1,);
+        return array (  166 => 48,  160 => 44,  146 => 36,  142 => 35,  137 => 33,  132 => 31,  128 => 30,  124 => 29,  120 => 28,  116 => 27,  113 => 26,  109 => 25,  94 => 12,  87 => 11,  78 => 8,  71 => 7,  62 => 4,  55 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -243,7 +246,10 @@ Book index
 \t\t</tbody>
 \t</table>
 
-\t<p><a href=\"{{ path('book_new') }}\">Create new</a></p>
+<p>
+\t<a href=\"{{ path('book_new') }}\" id=\"create-new-link\">Create new</a>
+</p>
+
 {% endblock %}
 ", "booklist/index.html.twig", "/var/www/web/templates/booklist/index.html.twig");
     }
