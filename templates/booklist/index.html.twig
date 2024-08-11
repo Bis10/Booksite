@@ -1,24 +1,53 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-Book index
+	Book index
 {% endblock %}
 
 {% block stylesheets %}
-	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+{% endblock %}
+
+{% block javascripts %}
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+document.querySelectorAll('.delete-btn').forEach(function (button) {
+button.addEventListener('click', function (event) {
+event.preventDefault();
+const form = button.closest('form');
+
+Swal.fire({
+title: 'Are you sure?',
+text: "You won't be able to revert this!",
+icon: 'warning',
+showCancelButton: true,
+confirmButtonColor: '#3085d6',
+cancelButtonColor: '#d33',
+confirmButtonText: 'Yes, delete it!',
+cancelButtonText: 'No, cancel!'
+}).then((result) => {
+if (result.isConfirmed) {
+form.submit();
+}
+});
+});
+});
+});
+	</script>
 {% endblock %}
 
 {% block body %}
-	<h1>Book index</h1>
+	<h1>Book Index</h1>
 	<table class="table">
 		<thead>
 			<tr>
-				<th>Title:</th>
-				<th>Author:</th>
-				<th>Year:</th>
-				<th>Genre:</th>
-				<th>Description:</th>
-				<th>Actions:</th>
+				<th>Title</th>
+				<th>Author</th>
+				<th>Year</th>
+				<th>Genre</th>
+				<th>Description</th>
+				<th>Actions</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -30,22 +59,23 @@ Book index
 					<td>{{ book.genre }}</td>
 					<td>{{ book.description }}</td>
 					<td>
-						<button><a href="{{ path('book_edit', {'id': book.id}) }}">edit</a></button>
-						<!-- Start of the form for delete button -->
-						<form action="{{ path('book_delete', {'id': book.id}) }}" method="post" onsubmit="return confirm('Are you sure?');">
+						<button>
+							<a href="{{ path('book_edit', {'id': book.id}) }}">edit</a>
+						</button>
+
+						<form action="{{ path('book_delete', {'id': book.id}) }}" method="post">
 							<input type="hidden" name="_token" value="{{ csrf_token('delete' ~ book.id) }}">
 							<input type="hidden" name="_method" value="DELETE">
-							<button type="submit">delete</button>
+							<button type="submit" class="delete-btn">delete</button>
 						</form>
-						<!-- End of the form for delete button -->
 					</td>
 				</tr>
 			{% endfor %}
 		</tbody>
 	</table>
 
-<p>
-	<a href="{{ path('book_new') }}" id="create-new-link">Add New Book</a>
-</p>
-
+	<p>
+		<a href="{{ path('book_new') }}" id="create-new-link">Add New Book</a>
+	</p>
 {% endblock %}
+
