@@ -1,16 +1,69 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Add New Book{% endblock %}
-
+{% block title %}Add New Book
+{% endblock %}
 
 {% block body %}
-<h1>Add New Book</h1>
+	<style>
+		/* Simple styling for the form container */
+		.form-container {
+			background-color: #f5f5f5;
+			padding: 20px;
+			border-radius: 10px;
+			max-width: 500px;
+			margin: auto;
+		}
 
-{{ form_start(form) }}
-{{ form_widget(form) }}
-<button class="btn">Save</button>
-{{ form_end(form) }}
+		/* Simple styling for form elements */
+		.form-container .form-control {
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 15px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			font-size: 20px;
+		}
 
-<a href="{{ path('book_index') }}" class="back-link">Back to Book List</a>
+		/* Styling for the Save button */
+		.form-container .btn {
+			background-color: #007bff;
+			color: white;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 20px;
+		}
 
+		/* Button hover effect */
+		.form-container .btn:hover {
+			background-color: #0056b3;
+		}
+
+		/* Styling for the back link */
+		.back-link {
+			display: inline-block;
+			margin-top: 20px;
+			color: #007bff;
+			text-decoration: none;
+			font-size: 20px;
+		}
+
+		/* Hover effect for back link */
+		.back-link:hover {
+			text-decoration: underline;
+		}
+	</style>
+
+	<div class="form-container">
+		<h1>Add New Book</h1>
+
+		{{ form_start(form) }}
+		{{ form_widget(form, {'attr': {'class': 'form-control'}}) }}
+		<button class="btn">Save</button>
+		{{ form_end(form) }}
+
+		<a href="{{ path('book_index') }}" class="back-link">Back to Book List</a>
+	</div>
 {% endblock %}
+
