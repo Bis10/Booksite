@@ -113,7 +113,7 @@ class __TwigTemplate_3db2435d028273a8d082ac2ffe7d058a extends Template
 \t\t<a href=\"";
         // line 22
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("book_index");
-        yield "\" class=\"back-link\">Back to list</a>
+        yield "\" class=\"back-link\">Back to Book List</a>
 \t</div>
 ";
         
@@ -169,7 +169,7 @@ class __TwigTemplate_3db2435d028273a8d082ac2ffe7d058a extends Template
 \t\t<button class=\"btn\">Update</button>
 \t\t{{ form_end(form) }}
 
-\t\t<a href=\"{{ path('book_index') }}\" class=\"back-link\">Back to list</a>
+\t\t<a href=\"{{ path('book_index') }}\" class=\"back-link\">Back to Book List</a>
 \t</div>
 {% endblock %}
 

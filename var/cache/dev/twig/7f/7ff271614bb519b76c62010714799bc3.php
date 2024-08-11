@@ -56,9 +56,9 @@ class __TwigTemplate_dde83c5cc0cdd2120c0aca0f1ecd6b89 extends Template
 
 \t\t<link rel=\"stylesheet\" href=\"./css/styles.css\">
 \t\t<link rel=\"stylesheet\" href=\"/css/editStyles.css\"> 
-\t\t<link rel=\"stylesheet\" href=\"/css/newStyles.css\">
 \t\t";
         // line 15
+        yield "\t\t";
         yield from $this->unwrap()->yieldBlock('javascripts', $context, $blocks);
         // line 16
         yield "\t\t</head>
@@ -130,7 +130,7 @@ class __TwigTemplate_dde83c5cc0cdd2120c0aca0f1ecd6b89 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  108 => 18,  95 => 15,  80 => 6,  70 => 19,  68 => 18,  64 => 16,  62 => 15,  53 => 8,  51 => 6,  44 => 1,);
+        return array (  108 => 18,  95 => 15,  80 => 6,  70 => 19,  68 => 18,  64 => 16,  61 => 15,  53 => 8,  51 => 6,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -148,7 +148,7 @@ class __TwigTemplate_dde83c5cc0cdd2120c0aca0f1ecd6b89 extends Template
 
 \t\t<link rel=\"stylesheet\" href=\"./css/styles.css\">
 \t\t<link rel=\"stylesheet\" href=\"/css/editStyles.css\"> 
-\t\t<link rel=\"stylesheet\" href=\"/css/newStyles.css\">
+\t\t{# <link rel=\"stylesheet\" href=\"/css/newStyles.css\"> #}
 \t\t{% block javascripts %}{% endblock %}
 \t\t</head>
 \t\t<body>

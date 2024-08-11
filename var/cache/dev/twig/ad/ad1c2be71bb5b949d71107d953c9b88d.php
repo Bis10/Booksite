@@ -164,7 +164,7 @@ class __TwigTemplate_3792b563c6a3178a5526312fe4ec6b86 extends Template
 \t<a href=\"";
         // line 48
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("book_new");
-        yield "\" id=\"create-new-link\">Add new book</a>
+        yield "\" id=\"create-new-link\">Add New Book</a>
 </p>
 
 ";
@@ -247,7 +247,7 @@ Book index
 \t</table>
 
 <p>
-\t<a href=\"{{ path('book_new') }}\" id=\"create-new-link\">Add new book</a>
+\t<a href=\"{{ path('book_new') }}\" id=\"create-new-link\">Add New Book</a>
 </p>
 
 {% endblock %}
